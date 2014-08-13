@@ -24,7 +24,7 @@ module Rumm::SpecHelper
 end
 
 RSpec.configure do |config|
-  config.color_enabled = true
+  config.color = true
   config.include Aruba::Api, :example_group => {
     :file_path => /spec\/features/
   }
