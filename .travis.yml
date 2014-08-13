@@ -1,4 +1,7 @@
 rvm:
+  - 2.1.2
+  - 2.1.1
+  - 2.1.0
   - 2.0.0
   - 1.9.3
 notifications:
@@ -6,4 +9,3 @@ notifications:
     - prabhakar.gopalan@rackspace.com
     - cowboyd@thefrontside.net
     - hayesmp@thefrontside.net
-    
