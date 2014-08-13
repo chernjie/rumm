@@ -94,7 +94,7 @@ describe "configuration" do
 
         When do
           configuration.username = "unclebob"
-          configuration.reload.should be_true
+          configuration.reload.should be_truthy
         end
         Then { configuration.username.should == "racker" }
       end
@@ -112,7 +112,7 @@ describe "configuration" do
         Given(:configuration) { ConfigurationProvider.new.value }
         Given { File.stub(:exists?).with("#{File.expand_path(current_dir)}/.rummrc").and_return(false)}
         Given { File.stub(:delete).never }
-        When { configuration.delete.should be_true }
+        When { configuration.delete.should be_truthy }
         Then { configuration.region.should == 'ord' }
         And { configuration.username.should == nil }
         And { configuration.api_key.should == nil }
@@ -122,7 +122,7 @@ describe "configuration" do
       context "should save the configuration" do
         Given(:configuration) { ConfigurationProvider.new.value }
         Given { JSON.stub :dump }
-        Then { configuration.save.should be_true }
+        Then { configuration.save.should be_truthy }
       end
     end
   end
@@ -135,7 +135,7 @@ describe "configuration" do
     end
     When do
       configuration.username = "unclebob"
-      configuration.reload.should be_false
+      configuration.reload.should be_falsy
     end
 
     Then { configuration.username.should == "unclebob" }
