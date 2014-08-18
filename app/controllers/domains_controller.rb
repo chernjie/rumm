@@ -24,6 +24,20 @@ class DomainsController < MVCLI::Controller
     domain
   end
 
+  def update
+    template = Domains::UpdateForm
+    argv = MVCLI::Argv.new command.argv
+    form = template.new argv.options
+    form.validate!
+
+    unupdated_domain = domain
+    unupdated_domain.domain = form.name if form.name
+    unupdated_domain.email  = form.email if form.email
+    unupdated_domain.ttl    = form.ttl if form.ttl
+
+    unupdated_domain.save
+  end
+
   def destroy
     domain.tap do |d|
       d.destroy
@@ -33,6 +47,6 @@ class DomainsController < MVCLI::Controller
   private
 
   def domain
-    domains.find { |d| d.domain == params[:id] } or fail Fog::Errors::NotFound
+    domains.find { |d| d.domain == params["id"] } or fail Fog::Errors::NotFound
   end
 end
