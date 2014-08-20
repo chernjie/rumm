@@ -33,9 +33,6 @@ class RecordsController < MVCLI::Controller
 
     unupdated_record = record
 
-    require 'pry'
-    binding.pry
-
     unupdated_record.name = form.name if form.name
     unupdated_record.type = form.type if form.type
     unupdated_record.value = form.data if form.data
