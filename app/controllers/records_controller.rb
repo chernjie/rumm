@@ -15,7 +15,9 @@ class RecordsController < MVCLI::Controller
     options = {
       name: form.name,
       type: form.type,
-      value: form.data
+      value: form.data,
+      ttl: form.ttl,
+      priority: form.priority
     }
 
     domain.records.create options
@@ -36,6 +38,8 @@ class RecordsController < MVCLI::Controller
     unupdated_record.name = form.name if form.name
     unupdated_record.type = form.type if form.type
     unupdated_record.value = form.data if form.data
+    unupdated_record.ttl = form.ttl if form.ttl
+    unupdated_record.priority = form.priority if form.priority
 
     unupdated_record.save
   end
