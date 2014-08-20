@@ -1,0 +1,5 @@
+  ID                Type Name                 Data
+  ==                ==== ====                 ====
+<% this.each do |record| %>
+  <%= '%-17s %-4s %-20s %-24s' % [record.id, record.type, record.name, record.value] %> 
+<% end %>
