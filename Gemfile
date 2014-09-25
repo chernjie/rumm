@@ -4,8 +4,8 @@ source 'https://rubygems.org'
 gemspec
 
 gem "rake"
-gem "rspec"
-gem "rspec-given"
+gem "rspec", "~> 3.0"
+gem "rspec-given", "~> 3.0"
 gem "aruba"
 gem "vcr"
 gem "popen4"
