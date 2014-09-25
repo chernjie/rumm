@@ -24,11 +24,17 @@ module Rumm::SpecHelper
 end
 
 RSpec.configure do |config|
-  config.color_enabled = true
-  config.include Aruba::Api, :example_group => {
-    :file_path => /spec\/features/
-  }
+  config.color = true
+
+  config.include Aruba::Api, :file_path => /spec\/features/
   config.include Rumm::SpecHelper
+
+  config.mock_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
+  config.expect_with :rspec do |c|
+    c.syntax = [:should, :expect]
+  end
 
   config.before(:each){ Aruba::InProcess.main_class.input.clear }
 
