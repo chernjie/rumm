@@ -1,0 +1,5 @@
+  ID                Name                             Email
+  ==                ====                             =====
+<% this.each do |domain| %>
+  <%= '%-17s %-32s %-24s' % [domain.id, domain.domain, domain.email] %> 
+<% end %>

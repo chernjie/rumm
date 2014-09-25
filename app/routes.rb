@@ -52,6 +52,18 @@ match 'destroy user :id on dbinstance :dbinstance_id' => 'users#destroy'
 
 match 'ssh :id' => 'servers#ssh'
 
+match 'show domains' => 'domains#index'
+match 'show domain :id' => 'domains#show'
+match 'create domain' => 'domains#create'
+match 'update domain :id' => 'domains#update'
+match 'destroy domain :id' => 'domains#destroy'
+
+match 'show records on domain :domain_id' => 'records#index'
+match 'show record :id on domain :domain_id' => 'records#show'
+match 'create record on domain :domain_id ' => 'records#create'
+match 'update record :id on domain :domain_id' => 'records#update'
+match 'destroy record :id on domain :domain_id' => 'records#destroy'
+
 match 'show containers' => 'containers#index'
 match 'show container :id' => 'containers#show'
 match 'create container' => 'containers#create'

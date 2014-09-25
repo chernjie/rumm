@@ -82,3 +82,9 @@ Attachments:
     rumm show attachments on server :server_id
     rumm attach volume :id to server :server_id
     rumm detach volume :id from server :server_id
+
+Domains:
+    rumm show domains
+    rumm show domain :name
+    rumm create domain
+    rumm destroy domain :name
