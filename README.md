@@ -47,4 +47,4 @@ For example to list servers in IAD you would execute the following:
 
 See the [official rumm website][1] for more information, including documentation.
 
-[1]: http://rackerlabs.github.io/rumm
+[1]: http://rackspace.github.io/rumm
