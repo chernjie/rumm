@@ -1,0 +1,11 @@
+Usage:
+    rumm show metadata on server :server_id
+
+Options:
+    none
+
+Arguments:
+    none
+
+Description:
+    Shows a list of all metadata on the given server.

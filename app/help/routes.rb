@@ -23,6 +23,12 @@ help('create server')
 help('update server')
 help('destroy server')
 
+help('show metadata on server')
+help('show metadatum on server')
+help('create metadatum on server')
+help('update metadatum on server')
+help('destroy metadatum on server')
+
 help('railsify server')
 help('install jenkins on server')
 help('create job on jenkins server')

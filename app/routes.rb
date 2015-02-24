@@ -17,6 +17,12 @@ match 'create server' => 'servers#create'
 match 'update server :id' => 'servers#update'
 match 'destroy server :id' => 'servers#destroy'
 
+match 'show metadata on server :server_id' => 'metadata#index'
+match 'show metadatum :id on server :server_id' => 'metadata#show'
+match 'create metadatum on server :server_id' => 'metadata#create'
+match 'update metadatum :id on server :server_id' => 'metadata#update'
+match 'destroy metadatum :id on server :server_id' => 'metadata#destroy'
+
 match 'railsify server :id' => 'railsifications#create'
 match 'install jenkins on server :id' => 'jenkins#create'
 match 'create job on jenkins server :id' => 'jobs#create'

@@ -1,0 +1,8 @@
+<% if this.empty? %>
+you don't have any metadata on this server, but you can create one by running:
+  rumm create metadatum on server :server_id
+<% else %>
+<% this.each do |metadatum| %>
+<%= metadatum.key %>: <%= metadatum.value %>
+<% end %>
+<% end %>
