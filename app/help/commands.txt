@@ -16,6 +16,13 @@ Servers:
     rumm destroy server :id
     rumm ssh :id
 
+Metadata:
+    rumm show metadata on server :server_id
+    rumm show metadatum :id on server :server_id
+    rumm create metadatum on server :server_id
+    rumm update metadatum :id on server :server_id
+    rumm destroy metadatum :id on server :server_id
+
 Railsify:
     rumm railsify server :id
 

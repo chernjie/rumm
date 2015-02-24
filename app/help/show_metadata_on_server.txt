@@ -1,0 +1,11 @@
+Usage:
+    rumm show metadata on server SERVER_ID
+
+Options:
+    none
+
+Arguments:
+    SERVER_ID: STRING          # The server whose metadatum to show
+
+Description:
+    Shows a list of all metadata on the given server.

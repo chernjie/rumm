@@ -1,0 +1,15 @@
+Usage:
+    rumm show metadatum ID on server SERVER_ID
+
+Options:
+    none
+
+Arguments:
+    ID: STRING                 # The key of the metadatum
+    SERVER_ID: STRING          # The server whose metadatum to show
+
+Description:
+    Shows the value of the server metadatum specified by ID.
+
+Examples:
+    rumm show metadatum RackConnectLBPool on server sorrel-shantung

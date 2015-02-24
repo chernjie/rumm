@@ -1,0 +1,16 @@
+Usage:
+    rumm create metadatum on server SERVER_ID [--key STRING] [--value STRING]
+
+Options:
+    --key STRING               # Name to give the new metadatum
+    --value STRING             # Value of metadatum
+
+Arguments:
+    SERVER_ID: STRING          # The server whose metadatum to show
+
+Description:
+     Creates or modify a new server metadatum. If the metadatum exists, it
+     will overwrite it.
+
+Examples:
+    rumm create metadatum on server rumm-example-server --key RackConnectLBPool --value POOL-some-pool

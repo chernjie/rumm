@@ -1,0 +1,16 @@
+Usage:
+    rumm update metadatum ID on server SERVER_ID [--value STRING]
+
+Arguments:
+    ID: STRING                 # Key of the server metadatum to update
+    SERVER_ID: STRING          # The server whose metadatum to show
+
+Options:
+    --value STRING             # Value of metadatum
+
+Description:
+    Updates the metadatum of given server to the new values.
+    It only updates the values if they're given in the command.
+
+Examples:
+    rumm update metadatum RackConnectLBPool on server silly-saffron --value POOL-some-pool

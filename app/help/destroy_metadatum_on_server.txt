@@ -1,0 +1,15 @@
+Usage:
+    rumm destroy metadatum ID on server SERVER_ID
+
+Options:
+    none
+
+Arguments:
+    ID: STRING                 # Key of the server metadatum to update
+    SERVER_ID: STRING          # The server whose metadatum to show
+
+Description:
+    This command will send a request to destroy the given metadatum on the named server.
+
+Examples:
+    rumm destroy metadatum RackConnectLBPool on server purple-bookcase
