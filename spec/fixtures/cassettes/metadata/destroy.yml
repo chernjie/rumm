@@ -90,4 +90,39 @@ http_interactions:
         1, "metadata": {"RackConnectLBPool":"POOL-other-pool"}}]}'
     http_version: 
   recorded_at: Thu, 26 Feb 2015 02:32:33 GMT
+- request:
+    method: delete
+    uri: https://ord.servers.api.rackspacecloud.com/v2/833532//servers/9adc286c-2e94-4a34-9d21-08f578fb826a/metadata/RackConnectLBPool
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      User-Agent:
+      - rumm/0.1.0 fog/1.16.0
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Auth-Token:
+      - "<rackspace-api-token>"
+  response:
+    status:
+      code: 204
+      message: 
+    headers:
+      Date:
+      - Thu, 26 Feb 2015 07:54:30 GMT, Thu, 26 Feb 2015 07:54:31 GMT
+      Via:
+      - 1.1 Repose (Repose/6.2.1.2)
+      Content-Type:
+      - application/json
+      X-Compute-Request-Id:
+      - req-ea0101a6-c923-4b00-8a06-058507e1ee65
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: UTF-8
+      string: ''
+    http_version: 
+  recorded_at: Thu, 26 Feb 2015 07:54:31 GMT
 recorded_with: VCR 2.9.3

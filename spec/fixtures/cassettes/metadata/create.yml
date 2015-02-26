@@ -87,7 +87,42 @@ http_interactions:
         "10038092", "name": "silly-saffron", "created": "2013-08-23T17:40:39Z", "tenant_id":
         "833532", "OS-DCF:diskConfig": "AUTO", "accessIPv4": "192.237.166.100", "accessIPv6":
         "2001:4801:7821:0077:aa50:10b5:ff10:fe8c", "progress": 100, "OS-EXT-STS:power_state":
-        1, "metadata": {"RackConnectLBPool":"POOL-other-pool"}}]}'
+        1, "metadata": {}}]}'
     http_version: 
   recorded_at: Thu, 26 Feb 2015 02:32:33 GMT
+- request:
+    method: put
+    uri: https://ord.servers.api.rackspacecloud.com/v2/833532//servers/9adc286c-2e94-4a34-9d21-08f578fb826a/metadata
+    body:
+      encoding: UTF-8
+      string: '{"metadata":{"RackConnectLBPool":"POOL-some-pool"}}'
+    headers:
+      User-Agent:
+      - rumm/0.1.0 fog/1.16.0
+      Content-Type:
+      - application/json
+      Accept:
+      - application/json
+      X-Auth-Token:
+      - "<rackspace-api-token>"
+  response:
+    status:
+      code: 200
+      message: 
+    headers:
+      Date:
+      - Thu, 26 Feb 2015 07:54:12 GMT, Thu, 26 Feb 2015 07:54:13 GMT
+      Via:
+      - 1.1 Repose (Repose/6.2.1.2)
+      Content-Type:
+      - application/json
+      X-Compute-Request-Id:
+      - req-e3999b82-5534-4b6c-8420-b62089aa5ccb
+      Server:
+      - Jetty(9.2.z-SNAPSHOT)
+    body:
+      encoding: UTF-8
+      string: '{"metadata": {"RackConnectLBPool": "POOL-some-pool"}}'
+    http_version: 
+  recorded_at: Thu, 26 Feb 2015 07:54:13 GMT
 recorded_with: VCR 2.9.3
