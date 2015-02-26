@@ -1,4 +1,5 @@
 class Metadata::CreateForm < MVCLI::Form
-  input :key
-  input :value
+  requires :naming
+  input :key, String
+  input :value, String
 end

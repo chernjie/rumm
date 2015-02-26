@@ -16,11 +16,12 @@ class MetadataController < MVCLI::Controller
     form = template.new argv.options
     form.validate!
 
-    return_data = Struct.new(:key, :value, :server).new(form.key, form.value, server);
+    return_data = Struct.new(:key, :value, :server).new(form.key, form.value, server)
 
-    metadata[form.key] = form.value unless form.value == nil or form.key == nil
-    metadata.save
-    metadata.reload
+    new_metadata = return_data.server.metadata
+    new_metadata[form.key] = form.value
+    new_metadata.save
+
     return_data
   end
 
@@ -31,19 +32,17 @@ class MetadataController < MVCLI::Controller
     form.validate!
 
     original = metadatum
-    return_data = Struct.new(:key, :value, :server, :original_value).new(original.key, form.value, server, original.value);
+    return_data = Struct.new(:key, :value, :server, :original_value).new(original.key, form.value, server, original.value)
 
-    metadata[original.key] = form.value unless form.value == nil or form.value == original.value
-    metadata.save
-    metadata.reload
+    original.value = form.value
+    original.save
     return_data
   end
 
   def destroy
     original = metadatum
-    return_data = Struct.new(:key, :value).new(original.key, original.value);
-    metadatum.destroy
-    metadata.reload
+    return_data = Struct.new(:key, :value).new(original.key, original.value)
+    original.destroy
     return_data
   end
 

@@ -1,3 +1,4 @@
 class Metadata::UpdateForm < MVCLI::Form
-  input :value
+  requires :naming
+  input :value, String
 end
