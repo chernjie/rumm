@@ -8,7 +8,7 @@ http_interactions:
       string: '{"auth":{"RAX-KSKEY:apiKeyCredentials":{"username":"<rackspace-username>","apiKey":"<rackspace-api-key>"}}}'
     headers:
       User-Agent:
-      - fog/1.16.0
+      - rumm/0.1.0 fog/1.16.0
       Content-Type:
       - application/json
       Accept:
@@ -20,19 +20,17 @@ http_interactions:
       message: 
     headers:
       Server:
-      - nginx/0.8.55
+      - nginx
       Date:
-      - Fri, 23 Aug 2013 17:45:03 GMT
+      - Thu, 26 Feb 2015 02:32:30 GMT
       Content-Type:
       - application/json
+      Transfer-Encoding:
+      - chunked
       Connection:
       - keep-alive
       vary:
       - Accept, Accept-Encoding, X-Auth-Token
-      VIA:
-      - 1.0 Repose (Repose/2.3.5)
-      Content-Length:
-      - '6168'
       Front-End-Https:
       - 'on'
     body:
@@ -42,7 +40,7 @@ http_interactions:
         Role that allows a user access to keystone Service methods","name":"object-store:default"},{"tenantId":"833532","id":"6","description":"A
         Role that allows a user access to keystone Service methods","name":"compute:default"}],"name":"<rackspace-username>","RAX-AUTH:defaultRegion":"ORD"}}}'
     http_version: 
-  recorded_at: Fri, 23 Aug 2013 17:45:03 GMT
+  recorded_at: Thu, 26 Feb 2015 02:32:31 GMT
 - request:
     method: get
     uri: https://ord.servers.api.rackspacecloud.com/v2/833532/servers/detail
@@ -51,28 +49,28 @@ http_interactions:
       string: ''
     headers:
       User-Agent:
-      - fog/1.16.0
+      - rumm/0.1.0 fog/1.16.0
       Content-Type:
       - application/json
       Accept:
       - application/json
       X-Auth-Token:
-      - <rackspace-api-token>
+      - "<rackspace-api-token>"
   response:
     status:
       code: 200
       message: 
     headers:
       Date:
-      - Fri, 23 Aug 2013 17:45:08 GMT
-      Content-Length:
-      - '1330'
+      - Thu, 26 Feb 2015 02:32:32 GMT, Thu, 26 Feb 2015 02:32:33 GMT
+      Via:
+      - 1.1 Repose (Repose/6.2.1.2)
       Content-Type:
       - application/json
       X-Compute-Request-Id:
-      - req-7ee42836-7c99-420e-8131-6474285dafef
+      - req-9ae77019-0375-4070-8509-26f4f5342ee5
       Server:
-      - Jetty(8.0.y.z-SNAPSHOT)
+      - Jetty(9.2.z-SNAPSHOT)
     body:
       encoding: UTF-8
       string: '{"servers": [{"status": "ACTIVE", "updated": "2013-08-23T17:44:50Z",
@@ -91,40 +89,5 @@ http_interactions:
         "2001:4801:7821:0077:aa50:10b5:ff10:fe8c", "progress": 100, "OS-EXT-STS:power_state":
         1, "metadata": {}}]}'
     http_version: 
-  recorded_at: Fri, 23 Aug 2013 17:45:08 GMT
-- request:
-    method: get
-    uri: https://ord.servers.api.rackspacecloud.com/v2/833532/servers/9adc286c-2e94-4a34-9d21-08f578fb826a/metadata
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      User-Agent:
-      - fog/1.16.0
-      Content-Type:
-      - application/json
-      Accept:
-      - application/json
-      X-Auth-Token:
-      - <rackspace-api-token>
-  response:
-    status:
-      code: 200
-      message: 
-    headers:
-      Date:
-      - Fri, 23 Aug 2013 16:57:05 GMT
-      Content-Length:
-      - '16'
-      Content-Type:
-      - application/json
-      X-Compute-Request-Id:
-      - req-705adb59-bbb6-4d25-9ee4-1d358339b36c
-      Server:
-      - Jetty(8.0.y.z-SNAPSHOT)
-    body:
-      encoding: UTF-8
-      string: '{"metadata": {}}'
-    http_version: 
-  recorded_at: Fri, 23 Aug 2013 16:57:05 GMT
-recorded_with: VCR 2.5.0
+  recorded_at: Thu, 26 Feb 2015 02:32:33 GMT
+recorded_with: VCR 2.9.3
